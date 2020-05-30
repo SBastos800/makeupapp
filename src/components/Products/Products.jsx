@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Products.module.scss";
 import Product from "./Product";
+//import firebase, { firestore } from "../../firebase";
+
 
 export default class Products extends Component {
 
@@ -14,19 +16,19 @@ export default class Products extends Component {
         .catch(err => {console.log(err)})
         .then(res => res.json())
         .then(data => {
-            this.setState({ myProducts: data})
+            this.setState({ myProducts: data['myProducts']})
         })
         console.log(data)
     }
 
     render() {
+        console.log(this.state.myProducts)
         return(
             <section>
                 {this.state.myProducts.map((person, index) => (
                     <Product productData={person} key={index} />
                 ))}
             </section>
-
         );
     }
 }
