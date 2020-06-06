@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Products.module.scss";
 import Product from "./Product";
-//import firebase, { firestore } from "../../firebase";
+import SearchBar from "../Products/SearchBar";
+import firebase, { firestore } from "../../firebase";
 
 
 export default class Products extends Component {
@@ -11,7 +12,7 @@ export default class Products extends Component {
         url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
         myProducts: [],
         searchText: "",
-        filteredProducts: []
+        filteredProducts: [],
     };
 
     setSearchText = (event) => {
@@ -34,8 +35,12 @@ export default class Products extends Component {
             console.log(err);
         })
         .then(res => res.json())
-        .then((myProducts) => {
-            this.setState({ myProducts })
+        .then((data) => {
+            this.setState({ 
+                myProducts: data,
+                filteredProducts: data
+             })
+             console.log(data);
         });
         
     }
@@ -44,6 +49,8 @@ export default class Products extends Component {
         console.log(this.state.myProducts)
         return(
             <section>
+                <h1>Maybelline Products</h1>
+                <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
                 <section onClick={this.props.signOut}>
                     <button>Sign Out</button>
                 </section>
