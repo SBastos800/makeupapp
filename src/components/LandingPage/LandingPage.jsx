@@ -7,6 +7,7 @@ export default class LandingPage extends Component {
         return (
             <section className={styles.homePage}>
                 <h1>Welcome to Our Website</h1>
+                <h2>Please Login to browse our Maybelline Makeup Products</h2>
                 <div className={styles.gridWrapper}>
                     <div className={styles.pictures}>
                         <div className={styles.one}></div>
