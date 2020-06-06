@@ -1,5 +1,15 @@
 .navBarWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: 10%;
     width: 100%;
     border: 2px solid red;
+    
+    .navList {
+        display: flex;
+       
+    }
+
+   
 }

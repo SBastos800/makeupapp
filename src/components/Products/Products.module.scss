@@ -1,0 +1,19 @@
+.productsWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Abel;
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        font-family: Gruppo;
+        font-size: 50px;
+
+    }
+    .signOut {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+}

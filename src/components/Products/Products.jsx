@@ -48,12 +48,13 @@ export default class Products extends Component {
     render() {
         console.log(this.state.myProducts)
         return(
-            <section>
+            <section className={styles.productsWrapper}>
                 <h1>Maybelline Products</h1>
-                <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
-                <section onClick={this.props.signOut}>
+                <section className={styles.signOut} onClick={this.props.signOut}>
                     <button>Sign Out</button>
                 </section>
+                <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
+                
                 {this.state.myProducts.map((person, index) => (
                     <Product productData={person} key={index} />
                 ))}
