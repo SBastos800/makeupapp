@@ -7,7 +7,8 @@ import Product from "./Product";
 export default class Products extends Component {
 
     state = {
-        url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick",
+        // url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick",
+        url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
         myProducts: []
     };
 
