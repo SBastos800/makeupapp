@@ -9,8 +9,24 @@ export default class Products extends Component {
     state = {
         // url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick",
         url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
-        myProducts: []
+        myProducts: [],
+        searchText: "",
+        filteredProducts: []
     };
+
+    setSearchText = (event) => {
+        const searchText = event.target.value;
+        this.setState({searchText}, this.filterProducts)
+    }
+
+    filterProducts = () => {
+        let filteredProducts = this.state.myProducts.filter(product => {
+            return product.name
+            .toUpperCase()
+            .includes(this.state.searchText.toUppercase());
+        })
+        this.setState({ filteredProducts });
+    }
 
     componentDidMount() {
         fetch(this.state.url)
@@ -21,7 +37,7 @@ export default class Products extends Component {
         .then((myProducts) => {
             this.setState({ myProducts })
         });
-        // console.log(data)
+        
     }
 
     render() {
