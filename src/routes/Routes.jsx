@@ -4,8 +4,10 @@ import { Router, Redirect, globalHistory } from "@reach/router";
 import Login from "../components/Login";
 import firebase, { providers } from "../firebase";
 import Products from "../components/Products";
+import LandingPage from "../components/LandingPage";
+import PrivateRoutes from "../routes/PrivateRoutes";
 
-
+const NotFound = () => (<h2>Oops, page not found</h2>);
 
 export default class Routes extends Component {
    
@@ -26,17 +28,30 @@ export default class Routes extends Component {
        })
    }
    
+   signOut = () => {
+       firebase
+            .auth()
+            .signOut()
+            .then(() => {
+                this.setState({user: null});
+                globalHistory.navigate("/login");
+       })
+   }
    
    
     render() {
         return(
         
             <Router className={styles.container}>
-             
+                <Redirect noThrow from="/" to="landing" />
                 <Login path="login" signIn={this.signIn} />
-                <Products path="products" />
+                <LandingPage path="landing" />
+                <Products path="products" user={this.state.user} signOut={this.signOut} />
+                <PrivateRoutes path="private" user={this.state.user}> 
+                   
+                </PrivateRoutes>
                 
-
+                <NotFound default/>
             </Router>
 
         );

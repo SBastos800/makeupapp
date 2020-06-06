@@ -7,6 +7,7 @@ export default class NavBar extends Component {
         return (
             <section className={styles.navBarWrapper}>
                 <ul className={styles.navList}>
+                    <NavItem route="/landing" name="Home" />
                     <NavItem route="/login" name="Login" />
                     <NavItem route="/products" name="Products" />
                 </ul>

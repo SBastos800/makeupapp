@@ -27,6 +27,9 @@ export default class Products extends Component {
         console.log(this.state.myProducts)
         return(
             <section>
+                <section onClick={this.props.signOut}>
+                    <button>Sign Out</button>
+                </section>
                 {this.state.myProducts.map((person, index) => (
                     <Product productData={person} key={index} />
                 ))}
