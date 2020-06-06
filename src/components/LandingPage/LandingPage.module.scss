@@ -1,0 +1,57 @@
+
+.homePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .gridWrapper {
+        display: flex;
+        height: 700px;
+        width: 900px;
+        // border: 2px solid black;
+
+        .pictures {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+            grid-template-rows: 3fr 1fr 2fr 1fr ;
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            grid-template-areas: 
+
+            ".  one one ."
+            "two two three three"
+            "two two three three"
+            "two two . .";
+            background-color:#f7f4f4;
+
+            .one {
+                grid-area: one;
+                background-image: url("../../static/pink.jpg");
+                background-size: cover;     
+            }
+            .two {
+                grid-area: two;
+                background-image: url("../../static/dress.jpg");
+                background-size: cover;
+               
+            }
+            .three {
+                grid-area: three;
+                background-image: url("../../static/black.jpg");
+                background-size: cover;
+            }
+            .four {
+                grid-area: four;
+                // background-image: url("../../static/elegance.png");
+                // background-size: cover;
+               
+            }
+        }
+    }
+
+}
+
+
