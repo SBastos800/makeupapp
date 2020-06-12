@@ -46,9 +46,9 @@ export default class Routes extends Component {
                 <Redirect noThrow from="/" to="landing" />
                 <Login path="login" signIn={this.signIn} />
                 <LandingPage path="landing" />
-                <Products path="products" user={this.state.user} signOut={this.signOut} />
+               
                 <PrivateRoutes path="private" user={this.state.user}> 
-                   
+                    <Products path="products" user={this.state.user} signOut={this.signOut} />
                 </PrivateRoutes>
                 
                 <NotFound default/>
