@@ -1,11 +1,8 @@
 .productsWrapper {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     height: 100%;
     font-family: Abel;
-    
-
 
     h1 {
         text-align: center;
@@ -13,6 +10,7 @@
         font-family: Gruppo;
         font-size: 50px;
     }
+
     .signOut {
         display: flex;
         justify-content: flex-end;
@@ -34,16 +32,8 @@
 
     .individualProduct {
         display: flex;
-        // flex-direction: column;
-        // height: 100%;
-        // width: 100%;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: space-evenly;
-    
-       
-    
-
     }
-
 }

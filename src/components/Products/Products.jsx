@@ -2,18 +2,16 @@ import React, { Component } from "react";
 import styles from "./Products.module.scss";
 import Product from "./Product";
 import SearchBar from "../Products/SearchBar";
-import firebase, { firestore } from "../../firebase";
+// import firebase, { firestore } from "../../firebase";
 
 
 export default class Products extends Component {
 
     state = {
-        // url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_type=lipstick",
         url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
         myProducts: [],
         searchText: "",
         filteredProducts: []
-
     };
 
     setSearchText = (event) => {
@@ -43,7 +41,6 @@ export default class Products extends Component {
                 })
                 console.log(data);
             });
-
     }
 
     render() {

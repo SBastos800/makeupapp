@@ -1,9 +1,6 @@
 .searchBar {
     display: flex;
-    // flex-direction: row;
     justify-content: flex-end;
-    // max-width: 400px;
-    // border-radius: 2px;
     padding: 10px;
     text-align: right;
     margin: 20px;
@@ -14,8 +11,5 @@
     &:hover {
         transition: 0.5s;
         box-shadow: 10px 10px 10px rgba(0,0,0, 0.5);
-    }
-
-  
-    
+    }  
 }
