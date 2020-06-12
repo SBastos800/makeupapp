@@ -23,7 +23,7 @@ export default class Products extends Component {
         let filteredProducts = this.state.myProducts.filter(product => {
             return product.name
                 .toUpperCase()
-                .includes(this.state.searchText.toUppercase());
+                .includes(this.state.searchText.toUpperCase());
         })
         this.setState({ filteredProducts });
     }
