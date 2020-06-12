@@ -12,7 +12,8 @@ export default class Products extends Component {
         url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
         myProducts: [],
         searchText: "",
-        filteredProducts: [],
+        filteredProducts: []
+
     };
 
     setSearchText = (event) => {

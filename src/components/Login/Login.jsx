@@ -5,7 +5,8 @@ export default class Login extends Component {
     render() {
         return(
             <section onClick={this.props.signIn} className={styles.google}>
-            <h1>Welcome to our page! Please login to browse our amazing products!</h1>
+            <h1>Hi!! We are excited that you have chosen us and you're ready to take a look in our fantastic products!</h1>
+            <h2>Please click in the button below to sign in and then go to Products</h2>
                 <button>Sign in with google</button>
             </section>
         )
