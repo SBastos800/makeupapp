@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./Products.module.scss";
 import Product from "./Product";
 import SearchBar from "../Products/SearchBar";
-// import firebase, { firestore } from "../../firebase";
 
 
 export default class Products extends Component {
