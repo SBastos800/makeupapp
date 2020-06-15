@@ -52,7 +52,7 @@ export default class Products extends Component {
                 </section>
                 <SearchBar searchText={this.state.searchText} setSearchText={this.setSearchText} />
                 <section className={styles.individualProduct}>
-                    {this.state.myProducts.map((person, index) => (
+                    {this.state.filteredProducts.map((person, index) => (
                         <Product productData={person} key={index} />
                     ))}
                 </section>
