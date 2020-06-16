@@ -44,3 +44,14 @@
     }
 }
 
+@media only screen and (max-width: 525px) {
+    .google {
+        background-size: cover;
+
+        h1 {
+            background-color: white;
+            opacity: 0.6;
+        }
+    }
+}
+

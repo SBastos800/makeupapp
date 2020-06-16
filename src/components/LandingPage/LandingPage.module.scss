@@ -60,7 +60,31 @@
             }
         }
     }
+}
 
+@media only screen and (max-width: 768px) {
+    .homePage {
+        text-align: center;
+   
+        .gridWrapper {
+            height: 500px;
+            width: 350px;
+
+            .pictures {
+
+                margin: 20px;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                grid-template-areas: 
+
+                    "one"
+                    "two"
+                    "three";
+                background-color:#f7f4f4;
+            }
+        }       
+    }
 }
 
 
