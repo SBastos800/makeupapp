@@ -71,17 +71,16 @@
             width: 350px;
 
             .pictures {
-
+                background-color:#f7f4f4;
                 margin: 20px;
                 grid-template-rows: 1fr 1fr 1fr;
                 grid-template-columns: 1fr;
                 grid-gap: 20px;
                 grid-template-areas: 
-
+                
                     "one"
                     "two"
-                    "three";
-                background-color:#f7f4f4;
+                    "three";  
             }
         }       
     }
