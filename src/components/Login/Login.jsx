@@ -11,6 +11,6 @@ export default class Login extends Component {
                     <button>Sign in with google</button>
                 </section>
             </section>
-        )
+        );
     }
 }

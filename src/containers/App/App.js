@@ -9,10 +9,9 @@ export default class App extends Component {
     return (
       <div className={styles.app}>
       <NavBar />
-    
       <Routes />
       </div>
-    )
+    );
   }
 }
 

@@ -15,7 +15,6 @@ export default class Routes extends Component {
         user: null
     }
    
-   
     signIn = () => {
        firebase
        .auth()
@@ -38,22 +37,17 @@ export default class Routes extends Component {
        })
    }
    
-   
     render() {
         return(
-        
             <Router className={styles.container}>
                 <Redirect noThrow from="/" to="landing" />
                 <Login path="login" signIn={this.signIn} />
                 <LandingPage path="landing" />
-               
                 <PrivateRoutes path="private" user={this.state.user}> 
                     <Products path="products" user={this.state.user} signOut={this.signOut} />
                 </PrivateRoutes>
-                
                 <NotFound default/>
             </Router>
-
         );
     }
 }

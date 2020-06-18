@@ -8,6 +8,6 @@ export default class NavItem extends Component {
             <section className={styles.navItem}>
                 <Link to={this.props.route}>{this.props.name}</Link>
             </section>
-        )
+        );
     }
 }
