@@ -8,8 +8,8 @@ export default class App extends Component {
   render() {
     return (
       <div className={styles.app}>
-      <NavBar />
-      <Routes />
+        <NavBar />
+        <Routes />
       </div>
     );
   }

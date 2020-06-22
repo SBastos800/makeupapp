@@ -43,7 +43,7 @@ export default class Products extends Component {
     }
 
     render() {
-        console.log(this.state.myProducts)
+        // console.log(this.state.myProducts)
         return (
             <section className={styles.productsWrapper}>
                 <h1>Maybelline Products</h1>
