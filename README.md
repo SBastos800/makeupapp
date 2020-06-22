@@ -1,3 +1,13 @@
+# Makeup App
+
+## Makeup React App
+This is a React App created after ending the nology course. In this React app I used firebase back-end that incorporated react routing, state and props. I also included a firebase authentication system and it's also connected to an API that returns information to the user about makeup products.
+
+## How to use
+You can clone this repo down and then do 'yarn install' in the terminal for all of the related packages to be installed. Then, you can do a 'yarn start' to view in the browser.
+
+The Home page is accessible to the public. If you login, you will have access to the Maybelline products where you can use the search bar to find a specific product. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
