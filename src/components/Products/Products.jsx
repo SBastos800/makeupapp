@@ -7,7 +7,7 @@ import SearchBar from "../Products/SearchBar";
 export default class Products extends Component {
 
     state = {
-        url: "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
+        url: "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline",
         myProducts: [],
         searchText: "",
         filteredProducts: []
